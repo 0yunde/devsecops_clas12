@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Carpeta con resultados de OWASP Dependency-Check
+dependency-check/
+
+# Fichero (o ficheros) de reportes de Dependency-Check
+dependency-check-report.html
+
+# o, si el nombre varía o hay más extensiones:
+*dependency-check-report*
