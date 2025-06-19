@@ -2,9 +2,11 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -21,8 +23,8 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ver entorno usando secret
-        run: echo "Entorno actual: ${{ secrets.NODE_ENV }}"
+      - name: Ver entorno
+        run: echo "Entorno actual: ${{ secrets.NODE_ENV }}"        
 
       - name: Ejecutar pruebas
         run: npm test
