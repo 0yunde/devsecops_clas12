@@ -11,6 +11,7 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v3
@@ -24,7 +25,8 @@ jobs:
         run: npm install
 
       - name: Ver entorno
-        run: echo "Entorno actual: ${{ secrets.NODE_ENV }}"        
+        run: |
+          echo "Entorno actual: ${{ secrets.NODE_ENV }}"
 
       - name: Ejecutar pruebas
         run: npm test
